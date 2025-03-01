@@ -78,13 +78,13 @@ SQLAlchemy==2.0.36
 sympy==1.13.1
 tables==3.9.2
 tenacity==9.0.0
-tensorboard==2.11.2
-tensorboard-data-server==0.6.1
-tensorflow==2.11.0
-tensorflow-addons==0.22.0
-tensorflow-estimator==2.11.0
-tensorflow-intel==2.11.0
-tensorflow-io-gcs-filesystem==0.31.0
+# tensorboard==2.11.2
+# tensorboard-data-server==0.6.1
+# tensorflow==2.11.0
+# tensorflow-addons==0.22.0
+# tensorflow-estimator==2.11.0
+# tensorflow-intel==2.11.0
+# tensorflow-io-gcs-filesystem==0.31.0
 threadpoolctl==3.5.0
 torch==1.13.0
 torch-geometric==2.6.1
