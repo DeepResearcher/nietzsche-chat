@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nietzsche ile Sohbet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .message-box {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        .user-message {
+            background: #007bff;
+            color: white;
+            text-align: right;
+        }
+        .nietzsche-message {
+            background: #ddd;
+            color: black;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Nietzsche ile Sohbet</h2>
+
+    <form method="POST" action="/" class="mb-3">
+        <label for="user_input">Nietzsche'ye sorun:</label>
+        <textarea class="form-control" name="user_input" rows="3"></textarea>
+        <button type="submit" class="btn btn-primary mt-3 w-100">Gönder</button>
+    </form>
+
+    {% if response_text %}
+        <div class="message-box user-message">
+            <strong>Sen:</strong>
+            <p>{{ user_input }}</p>
+        </div>
+        <div class="message-box nietzsche-message">
+            <strong>Nietzsche:</strong>
+            <p>{{ response_text | safe }}</p>
+        </div>
+    {% endif %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
